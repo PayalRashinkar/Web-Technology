@@ -1,7 +1,5 @@
 # Web-Technology
 
-Following are the projects as part of web technology:
-
 Responsive frontend Restaurant webpage
 
 1. Developed a responsive web page by replicating a given design using pure HTML and CSS, ensuring precise alignment, fonts, and colors.
