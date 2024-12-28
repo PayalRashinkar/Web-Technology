@@ -1,0 +1,39 @@
+.container {
+  padding-top: 30px;
+}
+.search-container {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.input-group-icons {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search-icon,
+.clear-icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #495057;
+}
+
+.form-control {
+  outline: none;
+  box-shadow: inset 0 1px 1px #fdfcfcf5, 0 0 8px rgba(102, 175, 233, 0.6);
+
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  border: 2px solid #2200ff;
+  border-radius: 20px;
+  overflow: hidden;
+}

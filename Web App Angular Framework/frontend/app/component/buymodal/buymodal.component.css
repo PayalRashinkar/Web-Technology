@@ -1,0 +1,34 @@
+.total-text{
+    text-align: left;
+    margin-right: auto;
+}
+
+.modal-body > div {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input {
+    margin-left: 10px; /* This adds some space between the label and the input */
+    flex: 0 0 auto; /* This prevents the input from stretching */
+}
+
+.modal-dialog {
+    width: 90%; /* or any percentage or fixed width you desire */
+    height: 100%;
+    margin: 30px auto;
+}
+
+.error-message {
+    color: red;
+    /* Other styles as needed */
+  }
+  
+  .modal-ku {
+    width: 750px;
+    margin: auto;
+  }
+
+
+
+

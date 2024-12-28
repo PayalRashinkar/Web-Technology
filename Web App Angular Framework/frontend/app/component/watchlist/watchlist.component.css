@@ -1,0 +1,27 @@
+.text-success {
+    color: green;
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  
+  .text-black {
+    color: black;
+  }
+  
+  .close-symbol {
+    cursor: pointer;
+    font-size: 17px; /* Adjust size as necessary */
+    line-height: 1;
+  }
+
+  .card-body {
+    cursor: pointer;
+  }
+
+  .container{
+    padding-top: 20px;
+  }
+  
+  

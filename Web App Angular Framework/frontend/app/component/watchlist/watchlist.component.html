@@ -1,0 +1,72 @@
+<div class="container mt-4">
+  <h2 class="mb-4 fs-3">My Watchlist</h2>
+
+  <!-- Check if watchlist is not empty -->
+  <mat-spinner
+    *ngIf="!finish_fetching && !noData"
+    class="mt-4 mx-auto"
+  ></mat-spinner>
+
+  <div *ngIf="finish_fetching && !noData; else noStocksTemplate">
+    <div *ngFor="let stock of watchlist" class="card mb-3">
+      <div class="card-body" (click)="openDetails(stock.ticker)">
+        <!--<button type="button" class="close" aria-label="Close" (click)="removeFromWatchlist(stock.ticker, $event)">
+            <span aria-hidden="true">&times;</span>
+          </button>-->
+        <div
+          class="close-symbol"
+          (click)="removeFromWatchlist(stock.ticker, $event)"
+        >
+          &#215;
+        </div>
+        <div class="d-flex justify-content-between align-items-start"></div>
+
+        <div class="row">
+          <div class="col">
+            <h5 class="card-title fs-6">
+              <b>{{ stock.ticker }}</b>
+            </h5>
+            <p class="card-text fs-9">{{ stock.name }}</p>
+          </div>
+          <div class="col text-right fs-6">
+            <p
+              [ngClass]="{
+                'text-success': stock.d > 0,
+                'text-danger': stock.d < 0,
+                'text-black': stock.d === 0
+              }"
+            >
+              {{ stock.c | number : "1.2-2" }}
+              <br />
+              <span *ngIf="stock.d > 0"
+                >&#x25B2; {{ stock.d | number : "1.2-2" }} ({{
+                  stock.dp | number : "1.2-2"
+                }}%)</span
+              >
+              <span *ngIf="stock.d < 0"
+                >&#x25BC; {{ stock.d | number : "1.2-2" }} ({{
+                  stock.dp | number : "1.2-2"
+                }}%)</span
+              >
+              <span *ngIf="stock.d === 0"
+                >{{ stock.d | number : "1.2-2" }} ({{
+                  stock.dp | number : "1.2-2"
+                }}%)</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noStocksTemplate>
+    <div
+      *ngIf="showAlert1 && noData"
+      class="alert alert-warning alert-dismissible text-center"
+      role="alert"
+    >
+      {{ alertMessage1 }}
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,134 @@
+.container {
+  padding-top: 20px;
+  background-color: white;
+  overflow: hidden;
+  margin-bottom: 50px;
+ 
+
+}
+
+.search-container {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.input-group-icons {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.search-icon,
+.clear-icon {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 10px;
+  color: #495057;
+}
+
+.form-control {
+  outline: none;
+  box-shadow: inset 0 1px 1px #fdfcfcf5, 0 0 8px rgba(102, 175, 233, 0.6);
+
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  border: 2px solid #2200ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* In your search.component.css or styles.css */
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  align-items: flex-start;
+}
+
+.summary-item {
+  margin: 5px 0;
+}
+
+.summary-item label {
+  font-weight: bold;
+}
+
+.summary-item span {
+  margin-left: 10px;
+}
+
+/* Adjust this selector to target the specific content within your 'Summary' tab */
+
+.About-container {
+  text-align: left; /* Align text to the left */
+  margin: auto; /* Center the container */
+  max-width: 600px; /* Set a max-width for the container */
+  padding-left: 15px; /* Add some padding to match the alignment */
+}
+
+.About-container h3 {
+  text-decoration: underline; /* If you need underline */
+  font-weight: bold; /* Adjust font weight as needed */
+}
+
+/* This will affect only the elements within the column with these classes */
+.col-md-4.text-center h2,
+.col-md-4.text-center h4,
+.col-md-4.text-center p {
+  margin-top: 0.25rem; /* Adjust top margin as needed */
+  margin-bottom: 0.25rem; /* Adjust bottom margin as needed */
+  line-height: 1.2; /* Adjust line height as needed */
+}
+
+/* Adjust the top margin of the button if necessary */
+.col-md-4.text-center .btn {
+  margin-top: 0.5rem; /* Adjust top margin as needed */
+}
+
+.yellow-star {
+  fill: rgb(241, 241, 12); /* Or use a specific yellow color code like #ff0 */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start of the flex container */
+  padding: 1em;
+}
+
+.modal-header h1 {
+  margin-bottom: 0; /* Remove margin below h1 if any */
+}
+
+.modal-date {
+  margin-top: 0.5em; /* Small space between source and date */
+  color: #555; /* Example color */
+}
+
+/* CSS for modal-footer to ensure proper alignment of share text with icons */
+.modal-footer {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.modal-footer > span {
+  margin-right: auto; /* Pushes the icons to the right */
+}
+
+

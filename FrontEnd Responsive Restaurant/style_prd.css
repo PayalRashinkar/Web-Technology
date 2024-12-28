@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1230px;
+  overflow-x: hidden;
+}
+
+.bg {
+  background-color: white;
+  position: fixed;
+  width: 1230px;
+  height: 60px;
+  z-index:1000;
+}
+
+.header {
+  color: tan;
+  font-size: larger;
+  padding: 14px 16px;
+  display: inline-block;
+  font-family: Arial;
+}
+
+.bg a {
+  float: right;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: black;
+  font-size: larger;
+  display: inline-block;
+  font-family: Arial;
+}
+
+.bg a:hover {
+  color: tan;
+}
+
+.image3 {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.text-on-image {
+  position: absolute;
+  top: 550px;
+  left: 500px;
+  transform: translate(-20%, -20%);
+  color: white;
+  font-size: 50px;
+  font-family: serif;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+.text_image_l1 {
+  position: absolute;
+  top: 1420px;
+  left: 230px;
+  transform: translate(-20%, -20%);
+  color: white;
+  font-size: 40px;
+  font-family: serif;
+  margin: 0 10px;
+  letter-spacing: 10px;
+  font-family: Arial;
+}
+
+.text_image_l2 {
+  position: absolute;
+  top: 1650px;
+  left: 230px;
+  transform: translate(-20%, -20%);
+  color: white;
+  font-size: 20px;
+  font-family: serif;
+  margin: 0 10px;
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: serif;
+}
+
+.text_image_l3 {
+  position: absolute;
+  top: 1800px;
+  left: 250px;
+  transform: translate(-20%, -20%);
+  color: white;
+  font-size: 20px;
+  font-family: serif;
+  margin: 0 10px;
+  letter-spacing: 5px;
+  border: 1px solid white;
+  padding: 10px;
+  font-family: Arial;
+}
+
+.quotation-mark {
+  font-size: 100px; /* Adjust the font size as needed */
+  color: #333; /* Adjust the color as needed */
+  margin-top: 75px;
+  margin-left: 580px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+}
+
+.test {
+  display: flex;
+  gap: 10px; /* Optional gap between columns */
+  padding: 5px;
+  font-family: Arial;
+}
+
+.column1 {
+  flex: 0;
+  text-align: left;
+  padding: 15px;
+  font-size: 17px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.column1:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+.row p {
+  color: tan;
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+.image2 {
+  width: 50px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: 70px;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 2150px;
+  left: 270px;
+  transform: translate(75%, 75%);
+  margin-left: 79px;
+}
+
+.text_overlay {
+  position: absolute;
+  top: 2650px;
+  left: 474px;
+  transform: translate(75%, 75%);
+  color: white;
+  font-size: 40px; /* Adjust the font size as needed */
+  letter-spacing: 20px;
+  font-family: Arial;
+}
+
+.text_overlay2 {
+  position: absolute;
+  top: 2850px;
+  left: 400px;
+  transform: translate(75%, 75%);
+  color: white;
+  font-size: 20px; /* Adjust the font size as needed */
+  letter-spacing: 20px;
+  text-align: center;
+  font-family: serif;
+}
+
+.text_overlay3 {
+  position: absolute;
+  top: 3000px;
+  left: 650px;
+  transform: translate(75%, 75%);
+  color: white;
+  font-size: 20px;
+  font-family: serif;
+  margin: 0 10px;
+  letter-spacing: 5px;
+  border: 1px solid white;
+  padding: 10px;
+  font-family: Arial;
+}
+
+.footer {
+  background-color: rgba(175, 148, 83, 255);
+  padding: 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.custom-container {
+  width: 1239px;
+  height: 1330px;
+  border: 1px solid #000; /* Optional: Just to visualize the container */
+}
+
+.text_overlay4 {
+  position: absolute;
+  top: 65px;
+  left: 900px;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 11px;
+  font-family: serif;
+  letter-spacing: 1px;
+  border: 1px solid white;
+  padding: 15px 15px;
+  font-family: Arial;
+}
+
+.parallax1{
+  background-image: url("images/image3.png");
+  min-height: 1230px;
+
+  background-attachment: fixed;
+  background-position: -150px 30px;
+  background-repeat: no-repeat;
+  background-size: 120% 110%;
+  margin-bottom: 100px;
+}
+
+
+.image_l {
+  display: inline; /* or block, depending on your layout */
+  margin-left: 70px;
+  margin-top: 100px;
+  padding: 14px 16px 14px 16px;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+
+.image_r {
+  display: inline;
+  margin-left: 90px;
+  padding: 14px 16px 14px 16px;
+  width: 50%; /* Each image takes 50% of the container width */
+  box-sizing: border-box; /* Include padding and border in the total width */
+  margin-bottom: 100px;
+
+
+}
+
+.parallax2{
+  background-image: url("images/image2.png");
+  min-height: 1000px;
+
+  background-attachment: fixed;
+  background-position: -150px 30px;
+  background-repeat: no-repeat;
+  background-size: 120% 110%;
+  padding: 40px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.footer {
+  background-color: rgba(175, 148, 83, 255);
+  padding: 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 100px;
+}

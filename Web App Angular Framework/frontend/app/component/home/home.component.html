@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="row">
+    <div class="row mt-3">
+      <div class="col-sm text-center" id="header-text">
+        <h1>STOCK SEARCH</h1>
+      </div>
+    </div>
+
+    <div class="search-container" click="searchTicker(searchedTicker)">
+      <form [formGroup]="formGroup">
+        <input
+          matInput
+          formControlName=""
+          type="text"
+          class="form-control"
+          [matAutocomplete]="auto"
+          placeholder="Enter stock ticker symbol"
+          [(ngModel)]="searchedTicker"
+          name="search"
+          (keyup.enter)="searchTicker(searchedTicker)"
+        />
+        <div class="input-group-icons">
+          <i
+            class="fa fa-search search-icon"
+            (click)="searchTicker(searchedTicker)"
+          ></i>
+          <i class="fa fa-times clear-icon" (click)="clearSearch()"></i>
+        </div>
+        <!--
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          [panelWidth]="400"
+          (optionSelected)="searchTicker($event.option.value)"
+        >
+          <mat-option *ngIf="spinner" class="is-loading"
+            ><mat-spinner diameter="30"></mat-spinner
+          ></mat-option>
+          <mat-option *ngIf="!spinner">
+            <mat-option
+              *ngFor="let item of combinedArray"
+              [value]="item.symbol"
+            >
+              <span>{{ item.symbol }}</span>
+              <small> | {{ item.description }}</small>
+            </mat-option>
+          </mat-option>
+        </mat-autocomplete>-->
+
+        <mat-autocomplete
+  #auto="matAutocomplete"
+  [panelWidth]="400"
+  (optionSelected)="searchTicker($event.option.value)"
+>
+  <!-- Only show loading spinner or options if there is input -->
+  <ng-container *ngIf="searchedTicker && searchedTicker.length > 0">
+    <mat-option *ngIf="spinner" class="is-loading">
+      <mat-spinner diameter="30"></mat-spinner>
+    </mat-option>
+    <mat-option
+      *ngFor="let item of combinedArray"
+      [value]="item.symbol"
+    >
+      <span>{{ item.symbol }}</span>
+      <small> | {{ item.description }}</small>
+    </mat-option>
+  </ng-container>
+</mat-autocomplete>
+
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+runtime: nodejs18
+
+env: standard
+instance_class: F1
+
+# You can set automatic scaling, manual scaling, or basic scaling.
+automatic_scaling:
+  target_cpu_utilization: 0.6
+  max_instances: 2
+
+# Handlers define how to route requests to your application's static files (like your Angular app) and how to route requests to your Node.js app.
+handlers:
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto

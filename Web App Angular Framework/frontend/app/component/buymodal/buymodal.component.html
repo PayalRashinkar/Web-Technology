@@ -1,0 +1,37 @@
+
+<!-- Modal -->
+
+<div class="modal-dialog modal-xl">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="exampleModalLabel">{{ data.ticker }}</h2>
+        <button type="button" class="btn-close" aria-label="Close" (click)="dialogRef.close()"></button>
+      </div>
+      <hr>
+      <div class="modal-body mt-3">
+        <p>Current Price: {{ data.currentPrice | number:'1.2-2' }}</p>
+            
+        <p>Money in Wallet: {{wallet.balance | currency}}</p>
+        
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="quantity-input" id="quantity" [(ngModel)]="quantity" min="0">
+            
+            
+        </div>
+        <p *ngIf="quantity * data.currentPrice > wallet.balance && buy_button" class="error-message">Not enough money in wallet!</p>
+        <p *ngIf="quantity > this.prd1 && !buy_button" class="error-message">You cannot sell the stocks that you dont have!</p>
+      </div>
+      <hr>
+      <div class="modal-footer mt-3">
+        <p class="total-text">Total: {{ quantity * data.currentPrice | currency }}</p>
+        <button *ngIf="buy_button" type="button" class="btn btn-success" [disabled]="isBuyDisabled" (click)="buyStocks()">Buy</button>
+        <button *ngIf="!buy_button" type="button" class="btn btn-danger" [disabled]="isSellDisabled" (click)="buyStocks()">Sell</button>
+        
+      </div>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,35 @@
+.navbar-nav .nav-link.active-link {
+  border: 2px solid white; 
+  border-radius: 15px;
+}
+
+.navbar {
+ 
+  top: 0;
+  width: 100%;
+  background-color: blue;
+  padding: 10px 40px 10px 40px;
+  outline: none;
+  font-size: 90%;
+  z-index: 100;
+  
+}
+.nav-item {
+  text-align: left;
+  margin: 0px 10px 0px 10px;
+}
+
+.payal{
+  border: 2px solid white; 
+  border-radius: 15px;
+
+}
+
+.navbar-collapse {
+  transition: max-height 0.3s ease; /* Smooth transition for expanding */
+  max-height: 200px; /* Set this to a value that will contain your expanded content */
+  overflow: hidden; /* Hide the overflow content during transition */
+}
+
+
+
